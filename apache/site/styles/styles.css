@@ -1,0 +1,429 @@
+@font-face {
+  font-family: 'Segoe-ui';
+  src: url("../fonts/segoe-ui.eot");
+  src: url("../fonts/segoe-ui.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Segoe-ui", sans-serif;
+}
+
+.navBox a {
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.container p {
+  margin-bottom: 0px;
+  font-size: 15px;
+}
+
+.topics {
+  padding-bottom: 5px;
+  margin: 5px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.topics:last-child {
+  margin-bottom: 10px;
+}
+
+.conheca-freire-container .videosContainer {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.conheca-freire-container .videosContainer:last-child {
+  margin-bottom: 5px;
+}
+
+.conheca-freire-container .videoBox h4 {
+  text-align: left;
+}
+
+.conheca-freire-container .biografias {
+  margin-bottom: 25px;
+}
+
+.conheca-freire-container a {
+  margin-left: 40px;
+}
+
+.conheca-freire-container .titulos-link {
+  margin-left: 25px;
+  font-size: 20px;
+  color: black;
+}
+
+.conheca-freire-container .titulos-link:hover {
+  color: black;
+}
+
+footer {
+  background-color: black;
+  max-width: 1140px;
+  height: 100%;
+  padding: 5px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+}
+
+footer p {
+  color: white;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+footer h2 {
+  font-size: 16px;
+  line-height: 1em;
+}
+
+footer h4 {
+  font-size: 16px;
+}
+
+footer .footer-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  margin: 0 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+footer .footer-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30%;
+  margin: 6px 20px 0 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  padding-top: 10px;
+}
+
+footer .footer-down h2 {
+  margin-top: 20px;
+}
+
+footer .footer-down h2, h4 {
+  color: white;
+  text-align: center;
+}
+
+footer .footer-down img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  padding-right: 10px;
+}
+
+footer .logo, .unesco-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  max-width: 300px;
+}
+
+footer .logo:hover, .unesco-logo:hover {
+  text-decoration: none;
+}
+
+footer .unesco-logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 60px;
+}
+
+footer .logo {
+  margin-right: 60px;
+}
+
+footer .logo img {
+  margin: 10px 0;
+}
+
+footer .logo h2 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 23px;
+  font-weight: 600;
+}
+
+footer .logo p {
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+footer .footer-top .vertical-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 10px;
+  margin-right: 20px;
+}
+
+.footer-top .vertical-block ul li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.vertical-block ul li a, .social-media a {
+  color: white;
+  font-size: 14.4px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.footer-top .vertical-block .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer-top .vertical-block.contact {
+  margin-top: -16px;
+}
+
+.vertical-block .social-media a {
+  color: white;
+  font-size: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5px;
+}
+
+.vertical-block .social-media a:hover {
+  color: white;
+}
+
+.vertical-block .social-media img {
+  margin-right: 10px;
+}
+
+footer .footer-down .parceiros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 400px;
+}
+
+footer .footer-down .parceiros a {
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+footer .footer-down .parceiros img {
+  margin: 0 20px;
+}
+
+footer .footer-down .langContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.langContainer select {
+  width: 180px;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.langContainer select option {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 960px) {
+  footer {
+    margin-top: 400px;
+  }
+}
+
+@media (max-width: 920px) {
+  .footer-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-top .logo {
+    margin: 10px 0;
+    max-width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 30px;
+  }
+  footer .footer-top .unesco-logo {
+    margin: 10px 0;
+    max-width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .footer-top .vertical-block.contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0;
+    margin: 0 4px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer-down {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    padding-bottom: 20px;
+  }
+  .footer-down h2 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .footer-down .langContainer select {
+    width: 80%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  footer {
+    margin-top: 100px;
+  }
+  #conteudoLadoEsquerdo {
+    height: 850px;
+  }
+}
+
+@media (max-width: 990px) {
+  footer {
+    margin-top: 300px;
+  }
+}
+
+@media (max-width: 540px) {
+  footer {
+    margin-top: 300px;
+  }
+}
+
+@media (max-width: 460px) {
+  footer {
+    margin-top: 550px;
+  }
+}
+
+@media (max-width: 360px) {
+  footer {
+    margin-top: 750px;
+  }
+}
+
+.classNavBar {
+  background-color: white;
+}
+
+#conteudoLadoEsquerdo {
+  background-color: black;
+  color: white;
+  display: block;
+}
+
+@media (max-width: 980px) {
+  #conteudoLadoEsquerdo {
+    display: none;
+    background-color: pink;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

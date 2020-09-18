@@ -1,0 +1,100 @@
+FROM php:7.3.6-fpm-alpine3.9
+
+
+RUN apk add --no-cache --virtual .build-deps \
+    $PHPIZE_DEPS \
+    curl-dev \
+    imagemagick-dev \
+    libtool \
+    libxml2-dev \
+    postgresql-dev \
+    git \
+    sqlite-dev
+
+# Install production dependencies
+RUN apk add --no-cache \
+    bash \
+    curl \
+    freetype-dev \
+    g++ \
+    gcc \
+    git \
+    icu-dev \
+    icu-libs \
+    imagemagick \
+    libc-dev \
+    libjpeg-turbo-dev \
+    libpng-dev \
+    libzip-dev \
+    make \
+    mysql-client \
+    nodejs \
+    nodejs-npm \
+    yarn \
+    openssh-client \
+    postgresql-libs \
+    rsync \
+    zlib-dev
+
+# Install PECL and PEAR extensions
+RUN pecl install \
+    imagick \
+    xdebug
+
+# Enable PECL and PEAR extensions
+RUN docker-php-ext-enable \
+    imagick \
+    xdebug
+
+# Configure php extensions
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+    && docker-php-ext-configure zip --with-libzip
+
+# Install php extensions
+RUN docker-php-ext-install \
+    bcmath \
+    calendar \
+    curl \
+    exif \
+    gd \
+    iconv \
+    intl \
+    mbstring \
+    pdo \
+    pdo_mysql \
+    pdo_pgsql \
+    pdo_sqlite \
+    pcntl \
+    tokenizer \
+    xml \
+    zip
+
+
+
+WORKDIR /var/www
+
+#RUN rm -rf /var/www/html
+#RUN ln -s public html
+
+
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
+
+RUN apk del -f .build-deps
+
+#COPY ./glossario /var/www/
+
+#RUN 
+#RUN chmod -R 777 /var/www/storage
+
+RUN sed -E -i -e 's/max_execution_time = 30/max_execution_time = 120/' /usr/local/etc/php/php.ini \
+ && sed -E -i -e 's/memory_limit = 128M/memory_limit = 6G/' /usr/local/etc/php/php.ini \
+ && sed -E -i -e 's/post_max_size = 8M/post_max_size = 4G/' /usr/local/etc/php/php.ini \
+ && sed -E -i -e 's/upload_max_filesize = 2M/upload_max_filesize = 2G/' /usr/local/etc/php/php.ini \
+ && sed -E -i -e 's/enable_post_data_reading = off/enable_post_data_reading = on/' /usr/local/etc/php/php.ini
+
+
+EXPOSE 9000
+
+ENTRYPOINT [ "php-fpm" ]
